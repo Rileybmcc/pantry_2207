@@ -22,7 +22,7 @@ RSpec.describe Recipe do
     expect(@recipe1.ingredients_required).to eq({})
   end
 
-  xit 'can add required ingredients to hash and return hash' do
+  it 'can add required ingredients to hash and return hash' do
     @recipe1.add_ingredient(@ingredient1, 2)
     @recipe1.add_ingredient(@ingredient1, 4)
     @recipe1.add_ingredient(@ingredient2, 8)
