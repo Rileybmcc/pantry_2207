@@ -12,7 +12,7 @@ RSpec.describe CookBook do
     @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
     @ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
     @ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
-    
+
   end
   it 'can add recipe and return recipes' do
 
@@ -22,16 +22,7 @@ RSpec.describe CookBook do
     expect(@cookbook.recipes).to eq([@recipe1, @recipe2])
   end
 
-  it 'can find ingredients for multiple recipes' do
-
-    @cookbook.add_recipe(@recipe1)
-    @cookbook.add_recipe(@recipe2)
-
-    expect(@cookbook.ingredients).to eq(["Cheese", "Macaroni", "Ground Beef", "Bun"])
-
-  end
-
-  xit 'can return ingredients for cookbook' do
+  it 'can return ingredients for cookbook' do
     @cookbook.add_recipe(@recipe1)
     @cookbook.add_recipe(@recipe2)
 
