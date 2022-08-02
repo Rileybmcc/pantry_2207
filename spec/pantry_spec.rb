@@ -13,7 +13,7 @@ RSpec.describe Pantry do
     expect(@pantry.stock).to eq({})
   end
 
-  xit 'can check stock for ingredient' do
+  it 'can check stock for ingredient' do
     expect(@pantry.stock_check(@ingredient1)).to eq(0)
   end
 
