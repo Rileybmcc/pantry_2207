@@ -19,6 +19,9 @@ class CookBook
     shopping_list.uniq
   end
 
-
+  def highest_calorie_meal
+    total = @recipes.map { |list| list.total_calories }.max
+    @recipes.find { |recipe| recipe.total_calories == total }
+  end
 
 end
