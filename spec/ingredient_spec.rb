@@ -9,7 +9,7 @@ RSpec.describe Ingredient do
     expect(@ingredient1.name).to eq("Cheese")
   end
 
-  xit 'can retun unit of measure for ingredient' do
+  it 'can retun unit of measure for ingredient' do
     expect(@ingredient1.unit).to eq("oz")
   end
 
