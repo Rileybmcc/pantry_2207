@@ -7,16 +7,20 @@ class Pantry
   end
 
   def stock_check(item)
-    if @stock[:item] == nil
+    if @stock[item] == nil
       0
     else
-      @stock[:item]
+      @stock[item]
     end
   end
 
   def restock(item, num)
-    @stock[:item] += num
+    @stock[item] += num
+  end
 
+  def enough_ingredients_for?(list)
+    gerard = list.ingredients_required.map { |item, num| @stock[item] >= num }
+    gerard.uniq.count == 1 && gerard.uniq == [true]
   end
 
 end
