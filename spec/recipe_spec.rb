@@ -29,10 +29,10 @@ RSpec.describe Recipe do
 
     expect(@recipe1.ingredients_required).to eq({@ingredient1 => 6, @ingredient2 => 8})
 
-    expect(@recipe1.ingredients).to eq(["Cheese", "Macaroni"])
+    expect(@recipe1.ingredients).to eq([@ingredient1, @ingredient2])    #(["Cheese", "Macaroni"])
   end
 
-  xit 'can return total calories for recipe' do
+  it 'can return total calories for recipe' do
 
     @recipe1.add_ingredient(@ingredient1, 2)
     @recipe1.add_ingredient(@ingredient2, 8)
