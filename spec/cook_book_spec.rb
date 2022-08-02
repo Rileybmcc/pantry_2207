@@ -37,7 +37,7 @@ RSpec.describe CookBook do
 
   end
 
-  xit 'can find the highest calorie meal' do
+  it 'can find the highest calorie meal' do
 
     @cookbook.add_recipe(@recipe1)
     @cookbook.add_recipe(@recipe2)
