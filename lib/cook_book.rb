@@ -1,8 +1,11 @@
+require 'date'
 class CookBook
-  attr_reader :recipes
+  attr_reader :recipes,
+              :date
 
   def initialize
     @recipes = []
+    @date = Date.today.strftime("%m-%d-%Y")      #{}"#{%m}-#{%d}-#{%y}"
   end
 
   def add_recipe(thing)

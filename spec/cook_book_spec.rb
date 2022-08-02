@@ -53,4 +53,9 @@ RSpec.describe CookBook do
 
   end
 
+  it 'can  return date cookbook was created' do
+    expect(@cookbook.date).to eq("08-02-2022")
+
+  end
+
 end
