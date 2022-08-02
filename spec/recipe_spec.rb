@@ -18,7 +18,7 @@ RSpec.describe Recipe do
     expect(@recipe1.name).to eq("Mac and Cheese")
   end
 
-  xit 'can return empty hash of required ingredients'do
+  it 'can return empty hash of required ingredients'do
     expect(@recipe1.ingredients_required).to eq({})
   end
 
