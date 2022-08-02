@@ -13,7 +13,7 @@ RSpec.describe Ingredient do
     expect(@ingredient1.unit).to eq("oz")
   end
 
-  xit 'can return calories in ingredient' do
+  it 'can return calories in ingredient' do
     expect(@ingredient1.calories).to eq(50)
   end
 
