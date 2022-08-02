@@ -4,9 +4,17 @@ require './lib/ingredient'
 RSpec.describe Pantry do
 
   before :each do
+    @recipe1 = Recipe.new("Mac and Cheese")
+    @recipe2 = Recipe.new("Cheese Burger")
     @ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
     @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
     @pantry = Pantry.new
+    @recipe1.add_ingredient(@ingredient1, 2)
+    @recipe1.add_ingredient(@ingredient2, 8)
+
+    @recipe2.add_ingredient(@ingredient1, 2)
+    @recipe2.add_ingredient(@ingredient3, 4)
+    @recipe2.add_ingredient(@ingredient4, 1)
   end
 
   it 'can return stock as empty hash' do
