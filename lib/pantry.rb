@@ -2,7 +2,7 @@ class Pantry
   attr_reader :stock
 
   def initialize
-    @stock = {}
+    @stock = Hash.new(0)
 
   end
 
@@ -14,6 +14,9 @@ class Pantry
     end
   end
 
+  def restock(item, num)
+    @stock[:item] += num
 
+  end
 
 end
