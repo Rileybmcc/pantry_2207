@@ -58,4 +58,14 @@ RSpec.describe CookBook do
 
   end
 
+  it 'can show a summary of recipes' do
+
+    @recipe2.add_ingredient(@ingredient3, 4)
+    @recipe2.add_ingredient(@ingredient4, 100)
+    @cookbook.add_recipe(@recipe1)
+    @cookbook.add_recipe(@recipe2)
+
+    expect(@cookbook.summary).to eq([{:name=>"Mac and Cheese", :details=>{:ingredients=>[{:ingredient=>"Macaroni", :amount=>"8 oz"}, {:ingredient=>"Cheese", :amount=>"2 C"}], :total_calories=>440}}, {:name=>"Burger", :details=>{:ingredients=>[{:ingredient=>"Ground Beef", :amount=>"4 oz"}, {:ingredient=>"Bun", :amount=>"100 g"}], :total_calories=>500}}])
+  end
+
 end
